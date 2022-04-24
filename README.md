@@ -36,7 +36,27 @@ telegraf-td7sd         1/1     Running     0          18h
 说明
 
 ```
+1，选择Flux Query， Fluxdb 2.x 只支持Flux 查询模式
+2，URL 配置  # Fluxdb beta 2.x 版本使用9999 端口作为http api 访问端口，这里映射为 30002 外部访问
+3，Origanization 为启动influxdb 配置
+4， Token 配置 # 2.x 要配置token
+ Authentication: Token ayK1YVVKiTnBPL4PTzjSMwOfrN6mgWUZK6XV05xlOgrViC-IB7W9xxSQfl9seinUwDSowZUiqUBjEuBrqvGdRA==
+5，Default Bucket # 默认查询数据库 启动时创建
 ```
+
+![image](https://github.com/Mountains-and-rivers/k8s-jmeter/blob/main/images/2.png)
+
+结果：
+
+网上找了个模板，实际要自己创建
+
+![image](https://github.com/Mountains-and-rivers/k8s-jmeter/blob/main/images/3.png)
+
+参考官网
+
+![image](https://github.com/Mountains-and-rivers/k8s-jmeter/blob/main/images/4.png)
+
+https://docs.influxdata.com/influxdb/v2.1/visualize-data/dashboards/
 
 ## 3, 部署jmeter
 
