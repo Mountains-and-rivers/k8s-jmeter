@@ -31,7 +31,7 @@ telegraf-td7sd         1/1     Running     0          18h
 
 3, Grafana 配置 influxdb数据源
 
-图片
+![image](https://github.com/Mountains-and-rivers/k8s-jmeter/blob/main/images/1.png)
 
 说明
 
