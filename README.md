@@ -60,5 +60,11 @@ https://docs.influxdata.com/influxdb/v2.1/visualize-data/dashboards/
 
 ## 3, 部署jmeter
 
+参考
 
+https://blog.csdn.net/lzf9651/article/details/116129354
+
+https://blog.csdn.net/zuozewei/article/details/115299107
+
+https://github.com/zuozewei/blog-example/tree/master/Kubernetes/k8s-jmeter-cluster
 
