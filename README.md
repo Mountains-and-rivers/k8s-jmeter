@@ -60,6 +60,8 @@ https://docs.influxdata.com/influxdb/v2.1/visualize-data/dashboards/
 
 ## 3, 部署jmeter
 
+jdk 11 +
+
 ![image](https://github.com/Mountains-and-rivers/k8s-jmeter/blob/main/images/5.png)
 
 ![image](https://github.com/Mountains-and-rivers/k8s-jmeter/blob/main/images/6.png)
