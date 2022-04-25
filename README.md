@@ -68,6 +68,8 @@ jdk 11 +
 
 ![image](https://github.com/Mountains-and-rivers/k8s-jmeter/blob/main/images/7.png)
 
+![image](https://github.com/Mountains-and-rivers/k8s-jmeter/blob/main/images/8.png)
+
 参考
 
 https://blog.csdn.net/lzf9651/article/details/116129354
