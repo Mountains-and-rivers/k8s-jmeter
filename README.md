@@ -72,3 +72,4 @@ https://blog.csdn.net/zuozewei/article/details/115299107
 
 https://github.com/zuozewei/blog-example/tree/master/Kubernetes/k8s-jmeter-cluster
 
+https://github.com/mderevyankoaqa/jmeter-influxdb2-listener-plugin
