@@ -1,0 +1,69 @@
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: telegraf
+  namespace: monitoring  
+spec:
+  selector:
+    matchLabels:
+      app: telegraf
+  template:
+    metadata:
+      labels:
+        app: telegraf
+    spec:
+      serviceAccount: cthulhu
+      volumes:
+      - name: config
+        configMap:
+          name: telegraf
+      containers:
+      - name: telegraf
+        image: telegraf:alpine
+        imagePullPolicy: IfNotPresent
+        volumeMounts:
+        - name: config
+          mountPath: /etc/telegraf/telegraf.conf
+          subPath: telegraf.conf     
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: telegraf
+  namespace: monitoring  
+data:
+  telegraf.conf: | 
+    [global_tags]
+      infra = "minikube"
+
+    [agent]
+
+      interval            = "15s"
+      round_interval      = true
+      metric_batch_size   = 1000
+      metric_buffer_limit = 10000
+      collection_jitter   = "0s"
+      flush_interval      = "15s"
+      flush_jitter        = "0s"
+      precision           = ""
+      debug               = false
+      quiet               = false
+      logfile             = ""
+      hostname            = "telegraf"
+      omit_hostname       = false
+
+    [[outputs.influxdb_v2]]
+      urls         = ["http://influxdb:8086"]
+
+      organization = "InfluxData"
+      bucket       = "kubernetes"
+      token        = "ayK1YVVKiTnBPL4PTzjSMwOfrN6mgWUZK6XV05xlOgrViC-IB7W9xxSQfl9seinUwDSowZUiqUBjEuBrqvGdRA=="
+
+    [[inputs.cpu]]  
+      percpu           = true
+      totalcpu         = true
+      collect_cpu_time = false
+      report_active    = false
+
+    [[inputs.disk]]
+       ignore_fs = ["rootfs","tmpfs", "devtmpfs", "devfs", "iso9660", "overlay", "aufs", "squashfs"]
