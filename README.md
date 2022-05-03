@@ -70,6 +70,18 @@ jdk 11 +
 
 ![image](https://github.com/Mountains-and-rivers/k8s-jmeter/blob/main/images/8.png)
 
+
+
+## 4，导出报告
+
+```
+JMeterPluginsCMD.bat --generate-csv D:\apache-jmeter-5.4.3\bin\result.csv  --input-jtl D:\apache-jmeter-5.4.3\bin\Test.jtl  --plugin-type AggregateReport
+
+jmeter.bat -Jjmeter.save.saveservice.output_format=xml -n -t HTTP请求.jmx -l Test.jtl
+```
+
+压力测试情况下，无法自动化，主要因为没有高可用inflxudb集群。
+
 参考
 
 https://blog.csdn.net/lzf9651/article/details/116129354
