@@ -75,7 +75,7 @@ jdk 11 +
 ## 4，导出报告
 
 ```
-jmeter.bat -Jjmeter.save.saveservice.output_format=xml -n -t HTTP请求.jmx -l Test.jtl
+jmeter.bat -Jjmeter.save.saveservice.output_format=xml -n -t HTTP请求.jmx -l Test.jtl -r ${remote host ip list for stress test}
 
 JMeterPluginsCMD.bat --generate-csv D:\apache-jmeter-5.4.3\bin\result.csv  --input-jtl D:\apache-jmeter-5.4.3\bin\Test.jtl  --plugin-type AggregateReport
 ```
