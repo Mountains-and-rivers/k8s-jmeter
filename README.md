@@ -74,9 +74,10 @@ jdk 11 +
 
 ## 4，导出报告
 
-```
-jmeter.bat -Jjmeter.save.saveservice.output_format=xml -n -t HTTP请求.jmx -l Test.jtl -r ${remote host ip list for stress test}
+![image](https://github.com/Mountains-and-rivers/k8s-jmeter/blob/main/images/8.png)
 
+```
+jmeter.bat -Jjmeter.save.saveservice.output_format=xml -n -t D:\apache-jmeter-5.4.3\bin\HTTP 请求.jmx  -l Test.jtl -R 192.168.31.253:1099 #-t 要带绝对路径  -j 输出jmeter运行日志路径
 JMeterPluginsCMD.bat --generate-csv D:\apache-jmeter-5.4.3\bin\result.csv  --input-jtl D:\apache-jmeter-5.4.3\bin\Test.jtl  --plugin-type AggregateReport
 ```
 
