@@ -89,6 +89,10 @@ jmeter-server -Dserver.rmi.localport=50000 -Dserver_port=1099 -Jserver.rmi.ssl.d
 
 参考
 
+https://cloud.tencent.com/developer/article/1540047
+
+https://blog.51cto.com/u_6183574/2454007
+
 https://www.editcode.net/archive/detail/29160
 
 https://blog.csdn.net/lzf9651/article/details/116129354
