@@ -82,7 +82,7 @@ jmeter.bat -Jjmeter.save.saveservice.output_format=xml -n -t D:\apache-jmeter-5.
 JMeterPluginsCMD.bat --generate-csv D:\apache-jmeter-5.4.3\bin\result.csv  --input-jtl D:\apache-jmeter-5.4.3\bin\Test.jtl  --plugin-type AggregateReport
 
 # 执行机
-jmeter.bat -Jjmeter.save.saveservice.output_format=xml -n -t HTTP请求.jmx -l Test.jtl
+jmeter-server -Dserver.rmi.localport=50000 -Dserver_port=1099 -Jserver.rmi.ssl.disable=true
 ```
 
 压力测试情况下，无法自动化，主要因为没有高可用inflxudb集群。
