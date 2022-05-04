@@ -74,7 +74,7 @@ jdk 11 +
 
 ## 4，导出报告
 
-![image](https://github.com/Mountains-and-rivers/k8s-jmeter/blob/main/images/8.png)
+![image](https://github.com/Mountains-and-rivers/k8s-jmeter/blob/main/images/9.png)
 
 ```
 # 控制机
